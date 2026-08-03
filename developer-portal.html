@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer Portal Redesign — Loan Tran</title>
+<meta name="description" content="Stakeholder research and five prototype iterations that replaced a static flow reference with a working interactive developer portal.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="wordmark" href="index.html">Loan Tran <span>Design Research</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <span class="site-nav__links">
+        <a href="index.html#work" aria-current="page">Work</a>
+        <a href="index.html#approach">Approach</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </span>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article>
+
+  <div class="wrap study-header">
+    <a class="back-link" href="index.html#work">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      All work
+    </a>
+    <p class="eyebrow">Case study 02</p>
+    <h1>Developer Portal Redesign</h1>
+    <p class="lede">
+      A static design file had quietly become the team's primary tool for aligning
+      clients and partners on payment flows. It was failing in three directions at
+      once — and the product was about to grow in a way that would make all three
+      worse.
+    </p>
+  </div>
+
+  <div class="wrap">
+    <div class="spec">
+      <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">UX Researcher &amp; Designer</div></div>
+      <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Stakeholder interviews · Thematic synthesis · Iterative prototyping</div></div>
+      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">7 stakeholder interviews · 5 prototype iterations</div></div>
+      <div class="spec__cell"><div class="spec__key">Output</div><div class="spec__val">Research synthesis and a working single-page portal prototype</div></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="prose">
+
+      <h2>The problem</h2>
+      <p>
+        The product team maintained a design-file "flow worksheet" — a static visual
+        reference showing how payment passkey enrollment and authentication looked on
+        mobile. It was the team's primary artifact for aligning clients, partners, and
+        internal regional teams on the experience.
+      </p>
+      <p>Three problems compounded each other:</p>
+      <ul>
+        <li>
+          <strong>It was mobile-only.</strong> Teams had no visual reference for web,
+          embedded, or responsive layouts — a routine client question with no quick answer.
+        </li>
+        <li>
+          <strong>It was expensive to maintain.</strong> Every update was a significant
+          manual effort, so the worksheet drifted out of sync with the live product.
+        </li>
+        <li>
+          <strong>It couldn't be shared directly.</strong> Sharing constraints meant teams
+          exported flows into slide decks, which stripped the interactivity and added a
+          delay to every request.
+        </li>
+      </ul>
+      <p>
+        The product was also about to scale — new regions, new locales, new authentication
+        technologies. The format was not going to survive that growth.
+      </p>
+
+      <h2>Research process</h2>
+      <p>
+        I ran a stakeholder interview series across the teams that relied on the worksheet
+        most: client services, regional partnership teams, and product leadership. Seven
+        interviews, chosen to represent both the teams that produced the worksheet and the
+        teams that consumed it downstream.
+      </p>
+      <p>
+        The goal was to understand how it was actually being used, rather than how it was
+        intended to be used — those turned out to be different things. I synthesized
+        findings thematically and validated each theme against the full interview set
+        before presenting it.
+      </p>
+
+      <h2>What I found</h2>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">01</span>
+          <h3 class="finding__title">The worksheet was a source asset, not a tool</h3>
+        </div>
+        <p>
+          It was rarely used directly. Teams extracted screens, dropped them into decks,
+          and re-contextualized them for every client conversation. Functionally it was a
+          screen library — but a static, hard-to-navigate one that nobody treated as the
+          destination.
+        </p>
+        <span class="consensus">Strong consensus</span>
+      </div>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">02</span>
+          <h3 class="finding__title">Visual gaps became communication failures</h3>
+        </div>
+        <p>
+          When clients asked about browser behavior, embedded layouts, or how a flow
+          would look at a different screen size, teams had no visual answer. They fell
+          back on verbal description or raw, unpolished captures — in a conversation
+          where the whole point was to show rather than tell.
+        </p>
+        <span class="consensus">Strong consensus</span>
+      </div>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">03</span>
+          <h3 class="finding__title">Maintenance friction was the structural problem</h3>
+        </div>
+        <p>
+          Every update was described as a project unto itself. That created a persistent
+          lag between what the product did and what the worksheet showed, which meant
+          teams and clients were routinely working from flows that were quietly out of
+          date. This was the root cause the other findings kept pointing back to.
+        </p>
+        <span class="consensus">Strong consensus</span>
+      </div>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">04</span>
+          <h3 class="finding__title">Clients couldn't picture the flow in their own product</h3>
+        </div>
+        <p>
+          A recurring problem: clients couldn't visualize how the flows would sit inside
+          their own interface. Decontextualized screens don't answer "what does this look
+          like in my app?" — and some regional teams had started building their own ad hoc
+          mockups to fill the gap, which is a reliable signal that a central artifact isn't
+          doing its job.
+        </p>
+        <span class="consensus">Mixed consensus</span>
+      </div>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">05</span>
+          <h3 class="finding__title">Scale was about to outpace the format</h3>
+        </div>
+        <p>
+          With expansion into new regions, locales, and authentication technologies, the
+          worksheet would need to cover substantially more surface area than it already
+          struggled to maintain. The problem was going to get worse on a known schedule.
+        </p>
+        <span class="consensus">Strong consensus</span>
+      </div>
+
+      <div class="finding">
+        <div class="finding__head">
+          <span class="finding__num">06</span>
+          <h3 class="finding__title">It was an internal alignment problem, not just a client one</h3>
+        </div>
+        <p>
+          The worksheet sat inside a large, distributed collaboration environment, with
+          regional teams building parallel materials to serve their own needs. Framing it
+          purely as a client-facing asset understated what it was actually being asked to
+          do.
+        </p>
+        <span class="consensus">Mixed consensus</span>
+      </div>
+
+      <h2>From findings to prototype</h2>
+      <p>
+        Rather than hand over a slide deck of recommendations, I built the argument. Five
+        iterations of an interactive prototype, each grounded in specific findings — so
+        every feature could be traced back to something a stakeholder had actually said.
+      </p>
+
+      <ul class="iterations">
+        <li>
+          <span class="it-key">V2</span>
+          <span class="it-body">
+            <strong>Baseline</strong>
+            Established the core concept — a hosted, filterable flow viewer with direct
+            navigation, replacing extraction with browsing. <em>Addresses finding 01.</em>
+          </span>
+        </li>
+        <li>
+          <span class="it-key">V3</span>
+          <span class="it-body">
+            <strong>Filters and multi-device</strong>
+            Use-case, language, and currency filters, plus device switching across mobile,
+            tablet, and desktop — closing the responsive gap and building for multi-locale
+            scale from the start. <em>Addresses findings 02 and 05.</em>
+          </span>
+        </li>
+        <li>
+          <span class="it-key">V4</span>
+          <span class="it-body">
+            <strong>Documentation and environments</strong>
+            A developer documentation panel — sequence diagrams, guides, API reference —
+            docked alongside the viewer, plus environment switching. One fewer separate
+            source to keep in sync, and earlier visibility for engineering.
+            <em>Addresses findings 03 and 06.</em>
+          </span>
+        </li>
+        <li>
+          <span class="it-key">V5</span>
+          <span class="it-body">
+            <strong>Export, design intent, and design-file integration</strong>
+            One-click export for regional teams; a toggle surfacing stakeholder vision
+            quotes inline as annotations; and an integration allowing real design frames to
+            replace coded mockups — solving the maintenance problem at its source rather
+            than adding another process to maintain. <em>Addresses findings 01 and 03.</em>
+          </span>
+        </li>
+      </ul>
+
+      <div class="method-card">
+        <h3>What the final prototype did</h3>
+        <p>
+          A fully self-contained single HTML file with no dependencies, covering five
+          payment integration types:
+        </p>
+        <ul>
+          <li>Use-case, language, currency, and integration-type filtering — six languages, seven currencies</li>
+          <li>Multi-device preview across mobile, tablet, and desktop</li>
+          <li>Environment switching and a feature-toggle panel for beta methods</li>
+          <li>Design-file integration mapping real frames into flow slots</li>
+          <li>Export to document, vector, presentation, image, and video formats</li>
+          <li>Integrated developer documentation per flow</li>
+          <li>Full-flow overview and step-by-step demo views</li>
+          <li>Design intent annotations surfacing stakeholder quotes as tooltips</li>
+        </ul>
+      </div>
+
+      <h2>Outcome</h2>
+      <p>
+        The prototype was used to align product leadership on the redesign direction. It
+        became the primary artifact in stakeholder reviews and was handed off as the
+        blueprint for engineering build-out.
+      </p>
+      <p>
+        It replaced the competing parallel decks that regional teams had been maintaining
+        separately, and demonstrated that the maintenance problem could be solved at the
+        source rather than by layering on another update process.
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>The finding underneath the findings.</strong> Partway through synthesis
+          it became clear the worksheet was being asked to serve two audiences with
+          incompatible needs. Internal teams wanted version history and export. Clients
+          wanted a filtered, contextual demo. The original format tried to be one thing and
+          served neither well — and no amount of maintenance was going to fix that. The
+          prototype architecture separates the two rather than compromising between them.
+        </p>
+      </div>
+
+      <div class="confidential">
+        <p>
+          Conducted at a global payment network. Company names, internal product and system
+          names, and proprietary business metrics have been omitted. Figures describe study
+          design only. A working prototype is available to discuss.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="wrap pager" aria-label="Case studies">
+    <a class="pager__link" href="usability-testing.html">
+      <span class="pager__dir">Previous</span>
+      <span class="pager__title">Payment Verification Flow — Usability Testing</span>
+    </a>
+    <a class="pager__link pager__link--next" href="agentic-commerce.html">
+      <span class="pager__dir">Next</span>
+      <span class="pager__title">Agentic Commerce &amp; Payment Security</span>
+    </a>
+  </nav>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>© <span id="year">2026</span> Loan Tran</span>
+    <nav aria-label="Footer">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#about">About</a>
+      <a href="mailto:loantran1212@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

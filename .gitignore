@@ -1,0 +1,14 @@
+# Source research files — contain full unredacted findings.
+# These must never be committed to a public repository.
+*.txt
+*.docx
+METRICS-REVIEW.md
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Contains third parties' personal phone numbers and email addresses.
+# Must never be committed to a public repository.
+Professional_References*.pdf
+*References*.pdf
