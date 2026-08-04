@@ -277,6 +277,20 @@ hr {
 .site-nav a[aria-current="page"] { color: var(--ink); }
 .site-nav a[aria-current="page"]::after { transform: scaleX(1); }
 
+/* Résumé download — stays visible when the section links collapse on mobile */
+.site-nav a.nav-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.site-nav a.nav-download svg {
+  width: 13px;
+  height: 13px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
 .theme-toggle {
   appearance: none;
   background: transparent;

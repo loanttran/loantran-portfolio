@@ -12,3 +12,6 @@ Thumbs.db
 # Must never be committed to a public repository.
 Professional_References*.pdf
 *References*.pdf
+
+# Local Claude Code settings
+.claude/

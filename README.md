@@ -1,15 +1,17 @@
-# Portfolio site — three-study edition
+# Portfolio site — four-study edition
 
-A focused cut of the portfolio: three qualitative and design-led studies. Independent of
-the seven-study site — its own folder, its own repo, its own URL.
+A focused cut of the portfolio: four studies — three qualitative and design-led, plus one
+dual-market experiment. Independent of the seven-study site — its own folder, its own
+repo, its own URL.
 
 Static. No build step, no dependencies.
 
 ```
-index.html                 Home — hero, three studies, approach, about, contact
+index.html                 Home — hero, four studies, approach, about, contact
 usability-testing.html     01  Payment Verification Flow — Usability Testing
 developer-portal.html      02  Developer Portal Redesign
 agentic-commerce.html      03  Agentic Commerce & Payment Security
+checkout-animation.html    04  Checkout Security Animation A/B
 Loan-Tran-Resume-2026.pdf  Linked from the hero and the contact section
 assets/css/style.css       All styling, light + dark
 assets/js/main.js          Theme toggle, header state
@@ -19,11 +21,11 @@ assets/js/main.js          Theme toggle, header state
 
 ## How this differs from the seven-study site
 
-- Three studies instead of seven, renumbered 01–03
-- **No survey studies** — so the scope figures changed: participants and markets rather
-  than survey respondents
-- Capability columns reordered to lead with qualitative and synthesis work, with a note
-  that the quantitative work isn't represented in this selection
+- Four studies instead of seven, renumbered 01–04
+- Scope figures recomputed for this selection: 1,800 survey respondents (the animation
+  A/B is the only survey here), 60+ qualitative participants, 5 markets
+- Capability columns lead with qualitative, then quantitative, with a note that the
+  larger-sample survey work isn't represented in this selection
 - Date range dropped from the work heading
 
 ## ⚠️ The references PDF is deliberately NOT in this folder
@@ -55,7 +57,7 @@ Everything else — name, location, email, experience, education — is filled i
 ## Preview locally
 
 ```bash
-cd "path/to/portfolio-three-studies"
+cd "path/to/portfolio-four-studies"
 python3 -m http.server 8001
 ```
 
