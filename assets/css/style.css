@@ -337,7 +337,38 @@ hr {
   margin-bottom: 1.6rem;
 }
 
-.hero .lede { max-width: 54ch; }
+/* The hero has no visible headline — the purpose statement carries it,
+   so it steps up to display scale. */
+.hero .lede {
+  max-width: 32ch;
+  font-size: clamp(1.6rem, 1.1rem + 2.1vw, 2.7rem);
+  line-height: 1.24;
+  letter-spacing: -0.021em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.hero .lede em {
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+@media (max-width: 40rem) {
+  .hero .lede { max-width: 20ch; }
+}
+
+/* Available to assistive tech, absent from the visual design. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 
 .hero__meta {
   display: flex;
