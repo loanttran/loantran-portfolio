@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payment Verification Flow — Usability Testing — Loan Tran</title>
-<meta name="description" content="Three rounds of unmoderated A/B qualitative testing on a biometric checkout enrollment experience, built on a participant-count verification method.">
+<title>Payment Authentication Setup Concept Testing — Loan Tran</title>
+<meta name="description" content="Three rounds of unmoderated qualitative testing on a payment authentication setup experience. Iterations focused on CTA button copy and presenting enough context for users without overburdening them with information.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
@@ -15,7 +15,7 @@
 
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="wordmark" href="index.html">Loan Tran</a>
+    <a class="wordmark" href="index.html">Loan Tran<span>User Experience Researcher</span></a>
     <nav class="site-nav" aria-label="Primary">
       <span class="site-nav__links">
         <a href="index.html#work" aria-current="page">Work</a>
@@ -44,19 +44,19 @@
       All work
     </a>
     <p class="eyebrow">Case study 01</p>
-    <h1>Payment Verification Flow — Usability Testing</h1>
+    <h1>Payment Authentication Setup Concept Testing</h1>
     <p class="lede">
-      Three rounds of unmoderated testing on a biometric checkout enrollment experience.
-      The most consequential finding was structural, and slightly inconvenient: the
-      moment you have to convince someone is the one moment you cannot show them why.
+      Three rounds of unmoderated qualitative testing on a payment authentication setup
+      experience. Iterations focused on CTA button copy and presenting enough context for
+      users without overburdening them with information.
     </p>
   </div>
 
   <div class="wrap">
     <div class="spec">
       <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">Lead UX Researcher</div></div>
-      <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Unmoderated usability testing · A/B qual · Transcript analysis · Participant-count verification</div></div>
-      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">3 rounds · ~10 participants per round · UK and US · Remote</div></div>
+      <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Unmoderated concept testing · A/B qual · AI-assisted transcript analysis · Participant-count verification</div></div>
+      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">n = 27 · 3 rounds · ~9 participants per round · UK and US · Remote</div></div>
       <div class="spec__cell"><div class="spec__key">Output</div><div class="spec__val">Round reports with six verified takeaways each</div></div>
     </div>
   </div>
@@ -87,19 +87,21 @@
       <p>
         The second purchase was the point. Watching the passkey work automatically at a
         different merchant was the moment most participants understood what they had
-        signed up for. Designing that moment into the protocol is what made the study's
-        central finding visible at all.
+        signed up for — which is why it was built into the protocol rather than left to a
+        follow-up question.
       </p>
 
 
       <h2>My role</h2>
       <ul>
         <li>Designed the three-round study, including the A/B qualitative structure and
-          the two-purchase task sequence that made the central finding observable at all</li>
+          the two-purchase task sequence that made the post-enrollment experience
+          observable rather than hypothetical</li>
         <li>Developed the participant-count verification method and applied it to every
           candidate takeaway across all three rounds</li>
-        <li>Wrote the transcript cleaning convention, including the systematic corrections
-          for speech-to-text errors that recurred in the domain vocabulary</li>
+        <li>Wrote the transcript cleaning convention — including the systematic corrections
+          for speech-to-text errors that recurred in the domain vocabulary — and directed
+          its application with AI assistance</li>
         <li>Wrote the discussion guide and set up the unmoderated test across UK and US participants</li>
         <li>Authored each round&rsquo;s report — six verified takeaways per round — and
           carried findings into the next round&rsquo;s stimulus</li>
@@ -125,6 +127,13 @@
           but rests on one or two vivid participants does not get presented as a pattern —
           and the vivid sessions are exactly the ones that stay with you.
         </p>
+        <p>
+          Coding was AI-assisted: candidate takeaways and the passages supporting them were
+          surfaced across the full transcript set rather than assembled by hand. The
+          participant-count check is what makes that defensible. Every candidate still had
+          to clear the same three-way tagging against every participant before it could be
+          elevated — so the tool could propose a pattern, but not confirm one.
+        </p>
       </div>
 
       <div class="method-card">
@@ -136,6 +145,12 @@
           silently; speech crossing task boundaries marked. Common speech-to-text errors
           were logged and corrected systematically — the transcription reliably mangled the
           domain vocabulary in the same ways, so the fixes could be applied consistently.
+        </p>
+        <p>
+          The convention was written first and applied with AI assistance — the filler and
+          notation passes, and the recurring domain-vocabulary corrections. Having the rules
+          fixed in advance is what let the work be delegated: the tool applied a documented
+          convention rather than exercising judgment about what a participant meant.
         </p>
         <p>
           Cleaned transcripts were treated as the source of truth and frozen once finalized.
@@ -152,110 +167,6 @@
         </p>
       </div>
 
-      <h2>What I found</h2>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">01</span>
-          <h3 class="finding__title">Willingness was predicted by repeat-use intent, not by the flow</h3>
-        </div>
-        <p>
-          Whether someone was willing to set up verification had almost nothing to do with
-          which variant they saw. The deciding factor was whether they expected to return
-          to the merchant. Participants framed it explicitly as an investment — if they
-          would never use the site again, there was no reason to leave biometric details
-          behind. Consistent across both groups and all three rounds.
-        </p>
-      </div>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">02</span>
-          <h3 class="finding__title">Mid-checkout placement amplified existing hesitancy</h3>
-        </div>
-        <p>
-          For participants already inclined to skip, interrupting the purchase made it
-          worse — they described being focused on completing the transaction and not
-          wanting to stop. Participants who were already willing moved through setup
-          without friction. The placement didn't create hesitancy; it amplified it in
-          people who were on the fence. That distinction matters for what you do about it.
-        </p>
-      </div>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">03</span>
-          <h3 class="finding__title">Most participants did not register two distinct steps</h3>
-        </div>
-        <p>
-          Many completed the one-time passcode and the passkey setup as a single
-          undifferentiated event. Asked afterward whether they had noticed two separate
-          verification steps, several were surprised — some hadn't registered the second
-          one at all. Among those who did notice, comprehension of the difference varied
-          considerably.
-        </p>
-      </div>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">04</span>
-          <h3 class="finding__title">Some assumed verification was retailer-specific</h3>
-        </div>
-        <p>
-          Participants with prior experience of a card issuer's trusted-merchant feature
-          initially assumed this setup was store-specific rather than card-level and
-          cross-merchant. Both self-corrected — one by rereading the screen carefully, the
-          other when the second purchase demonstrated continuity across retailers. The
-          correction happened, but it took effort that clearer network framing would have
-          made unnecessary on first exposure.
-        </p>
-      </div>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">05</span>
-          <h3 class="finding__title">Mental models varied, but outcome predictions were more reliable</h3>
-        </div>
-        <p>
-          Asked what they had signed up for, participants ranged from precise to
-          essentially empty. But asked what to expect next time, noticeably more of them
-          answered correctly than could explain the mechanism. For several, the practical
-          outcome was intuitive even where the underlying concept was not — which suggests
-          that comprehension of the mechanism may be the wrong thing to optimize for.
-        </p>
-      </div>
-
-      <div class="finding">
-        <div class="finding__head">
-          <span class="finding__num">06</span>
-          <h3 class="finding__title">The second purchase delivered clarity the enrollment screen could not</h3>
-        </div>
-        <p>
-          The most consistent finding across all three rounds. Participants who had been
-          confused, hesitant, or indifferent during enrollment reported that the second
-          purchase made everything make sense. One participant who rated their likelihood
-          of setting it up near the bottom of the scale reversed entirely to enthusiasm
-          after experiencing the streamlined second checkout. Another, who had
-          fundamentally misunderstood what she had signed up for, said she was confused
-          initially but understood after doing it a second time.
-        </p>
-      </div>
-
-      <div class="callout">
-        <p>
-          <strong>Why this one mattered most.</strong> The implication is structural, not
-          cosmetic. The enrollment moment is the wrong place to convince anyone — the proof
-          of value comes from experiencing the benefit, and that experience can only happen
-          <em>after</em> they have already enrolled. This creates a persuasion gap that copy
-          and UI cannot fully close, no matter how well written.
-        </p>
-        <p>
-          Which reframes the design problem. If enrollment can't carry the argument, then
-          the job of the enrollment screen is to lower the cost of saying yes — not to
-          justify it.
-        </p>
-      </div>
-
       <h2>What changed between rounds</h2>
       <p>
         Findings fed directly into the next round's stimulus, so each round tested a flow
@@ -265,19 +176,18 @@
         <li>
           <span class="it-key">R1 → R2</span>
           <span class="it-body">
-            The enrollment prompt was repositioned in response to the finding that
-            mid-checkout placement compounded hesitancy, and messaging was updated to
-            communicate the cross-merchant benefit earlier — addressing the
-            retailer-specificity confusion at its source.
+            CTA copy was revised and the enrollment prompt repositioned, so the offer read
+            more clearly and arrived at a less disruptive point in the purchase. Supporting
+            messaging was rewritten to communicate the cross-merchant benefit earlier.
           </span>
         </li>
         <li>
           <span class="it-key">R2 → R3</span>
           <span class="it-body">
-            The two-step structure was made more visually distinct, addressing the finding
-            that participants were not registering two separate events. Terminology was
-            standardized to reduce the label confusion that had emerged in the previous
-            round.
+            The two-step structure was made more visually distinct and terminology was
+            standardized across the flow. Context was tightened rather than added to —
+            enough to answer the questions participants were raising, without lengthening
+            what they had to read at the decision point.
           </span>
         </li>
       </ul>
@@ -303,8 +213,8 @@
       <div class="confidential">
         <p>
           Conducted at a global payment network. Company names, internal product names,
-          participant names, and proprietary metrics have been omitted. Figures describe
-          study design only; findings are described qualitatively.
+          participant names, and proprietary metrics have been omitted, as are the study's
+          findings. Figures describe study design only.
         </p>
       </div>
 
@@ -316,9 +226,9 @@
       <span class="pager__dir">Previous</span>
       <span class="pager__title" style="color: var(--ink-3)">—</span>
     </span>
-    <a class="pager__link pager__link--next" href="developer-portal.html">
+    <a class="pager__link pager__link--next" href="product-flows-worksheet.html">
       <span class="pager__dir">Next</span>
-      <span class="pager__title">Developer Portal Redesign</span>
+      <span class="pager__title">Product Flows Worksheet Redesign</span>
     </a>
   </nav>
 
@@ -328,11 +238,6 @@
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
     <span>© <span id="year">2026</span> Loan Tran</span>
-    <nav aria-label="Footer">
-      <a href="index.html#work">Work</a>
-      <a href="index.html#approach">Approach</a>
-      <a href="mailto:loantran1212@gmail.com">Email</a>
-    </nav>
   </div>
 </footer>
 

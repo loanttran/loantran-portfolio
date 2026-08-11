@@ -229,6 +229,10 @@ hr {
 }
 
 .wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  line-height: 1.15;
   font-family: var(--serif);
   font-size: 1.0625rem;
   font-weight: 600;
@@ -244,8 +248,8 @@ hr {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-3);
-  margin-left: 0.7rem;
   font-weight: 500;
+  white-space: normal;
 }
 
 .site-nav {
@@ -415,14 +419,6 @@ hr {
   letter-spacing: -0.018em;
 }
 
-.section__count {
-  font-family: var(--mono);
-  font-size: var(--t-micro);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  white-space: nowrap;
-}
 
 /* ---------- 8. Work index ---------- */
 
@@ -436,7 +432,7 @@ hr {
 
 .work-item__link {
   display: grid;
-  grid-template-columns: 3.5rem 1fr auto;
+  grid-template-columns: 3.5rem 1fr;
   gap: clamp(1rem, 2.5vw, 2.5rem);
   align-items: start;
   padding: clamp(1.6rem, 1rem + 2vw, 2.6rem) 0;
@@ -507,21 +503,8 @@ hr {
   border-color: var(--accent-ring);
 }
 
-.work-item__arrow {
-  position: relative;
-  padding-top: 0.5rem;
-  color: var(--ink-3);
-  transition: color 0.18s var(--ease), transform 0.22s var(--ease);
-}
-.work-item__link:hover .work-item__arrow {
-  color: var(--accent);
-  transform: translateX(3px);
-}
-.work-item__arrow svg { width: 18px; height: 18px; }
-
 @media (max-width: 46rem) {
   .work-item__link { grid-template-columns: 2.5rem 1fr; }
-  .work-item__arrow { display: none; }
 }
 
 /* ---------- 9. Scope figures (stat tiles) ---------- */
@@ -960,9 +943,6 @@ hr {
   font-size: 0.8125rem;
   color: var(--ink-3);
 }
-.site-footer a { color: var(--ink-3); text-decoration: none; }
-.site-footer a:hover { color: var(--accent); }
-.site-footer nav { display: flex; gap: 1.25rem; flex-wrap: wrap; }
 
 /* ---------- 16. Placeholder marker ---------- */
 
@@ -993,7 +973,7 @@ hr {
     --ink: #000; --ink-2: #222; --ink-3: #555;
     --rule: #ccc; --accent: #000;
   }
-  .site-header, .pager, .theme-toggle, .work-item__arrow, .skip-link { display: none !important; }
+  .site-header, .pager, .theme-toggle, .skip-link { display: none !important; }
   body { font-size: 11pt; line-height: 1.5; }
   a { text-decoration: none; color: #000; }
   .prose h2 { break-after: avoid; }
