@@ -6,7 +6,7 @@
 <title>Payment Authentication Setup Concept Testing — Loan Tran</title>
 <meta name="description" content="Three rounds of unmoderated qualitative testing on a payment authentication setup experience. Iterations focused on CTA button copy and presenting enough context for users without overburdening them with information.">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
@@ -47,7 +47,7 @@
     <h1>Payment Authentication Setup Concept Testing</h1>
     <p class="lede">
       Three rounds of unmoderated qualitative testing on a payment authentication setup
-      experience. Iterations focused on CTA button copy and presenting enough context for
+      experience. Iterations focused on CTA button copy and presenting <em>enough</em> context for
       users without overburdening them with information.
     </p>
   </div>
@@ -55,9 +55,17 @@
   <div class="wrap">
     <div class="spec">
       <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">Lead UX Researcher</div></div>
-      <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Unmoderated concept testing · A/B qual · AI-assisted transcript analysis · Participant-count verification</div></div>
-      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">n = 27 · 3 rounds · ~9 participants per round · UK and US · Remote</div></div>
-      <div class="spec__cell"><div class="spec__key">Output</div><div class="spec__val">Round reports with six verified takeaways each</div></div>
+      <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Unmoderated concept testing · A/B qual · AI-assisted transcript analysis</div></div>
+      <div class="spec__cell">
+        <div class="spec__key">Scale</div>
+        <div class="spec__val">n = 27 · 3 rounds</div>
+        <ul class="round-split">
+          <li><span>R1</span> n = 12 · US + UK</li>
+          <li><span>R2</span> n = 10 · UK</li>
+          <li><span>R3</span> n = 5 · UK</li>
+        </ul>
+      </div>
+      <div class="spec__cell"><div class="spec__key">Output</div><div class="spec__val">Figjam deliverable with key takeaways covering primary research questions, charts, and video clips</div></div>
     </div>
   </div>
 
@@ -66,75 +74,39 @@
 
       <h2>The study</h2>
       <p>
-        The product team was testing a passkey-based payment verification flow — a checkout
-        experience where a cardholder enrolls a biometric to replace one-time passcodes on
-        future purchases. Two framings of the same flow were tested side by side: one using
-        standard enrollment language, one reframed around the passkey concept itself.
+        The product and design team was testing copy variants of a passkey-based payment
+        authentication setup flow &mdash; a checkout experience where a user enrolls in a
+        passkey service (utilizing face ID, fingerprint, or PIN/pattern) to replace one-time
+        passcodes on future purchases.
       </p>
-      <p>Three questions were asked of every variant, every round:</p>
+      <p>Four questions were asked of every variant, each round:</p>
       <ul>
-        <li>Why are participants likely or unlikely to set up verification?</li>
+        <li>Why are participants likely or unlikely to enroll in passkey authentication?</li>
+        <li>Did they understand what they were signing up for?</li> 
         <li>Did the authentication experience meet their expectations?</li>
-        <li>Where did they hesitate, and where did they have questions or concerns?</li>
+        <li>Where did participants hesitate; where did they have questions or concerns?</li>
       </ul>
 
       <h3>The two-purchase structure</h3>
       <p>
-        Each participant completed two tasks: buy a toaster as a first-time user, which
-        triggers the enrollment prompt — then buy a bicycle at a different merchant, which
-        tests whether the enrolled passkey works seamlessly and whether they notice.
-      </p>
-      <p>
-        The second purchase was the point. Watching the passkey work automatically at a
-        different merchant was the moment most participants understood what they had
-        signed up for — which is why it was built into the protocol rather than left to a
-        follow-up question.
+        Each participant completed two tasks: 1) purchasing an item as a first-time user, which
+       prompts the enrollment flow, then 2) purchasing a second item at a different merchant, testing the authentication they had previously set up. One of the primary goals of the research was to determine whether the perceived value gained from authentication was worth the initial enrollment effort.
       </p>
 
 
       <h2>My role</h2>
       <ul>
-        <li>Designed the three-round study, including the A/B qualitative structure and
-          the two-purchase task sequence that made the post-enrollment experience
-          observable rather than hypothetical</li>
-        <li>Developed the participant-count verification method and applied it to every
-          candidate takeaway across all three rounds</li>
+        <li>Designed the three-round study, including the A/B qualitative structure and the
+          two-purchase task sequence</li>
         <li>Wrote the transcript cleaning convention — including the systematic corrections
           for speech-to-text errors that recurred in the domain vocabulary — and directed
           its application with AI assistance</li>
         <li>Wrote the discussion guide and set up the unmoderated test across UK and US participants</li>
-        <li>Authored each round&rsquo;s report — six verified takeaways per round — and
+        <li>Authored each round&rsquo;s report — six key takeaways per round — and
           carried findings into the next round&rsquo;s stimulus</li>
-        <li>Presented recommendations that informed enrollment prompt placement, messaging
-          hierarchy, and terminology standardization across the product</li>
       </ul>
 
       <h2>Method</h2>
-
-      <div class="method-card">
-        <h3>Participant-count verification</h3>
-        <p>
-          Every candidate takeaway was checked against the full participant set before it
-          could be elevated to a key finding. Each was tagged three ways:
-        </p>
-        <ul>
-          <li><strong>Supports</strong> — participants with clear, explicit evidence</li>
-          <li><strong>Partially supports</strong> — participants with indirect or weaker evidence</li>
-          <li><strong>Does not support</strong> — participants who contradicted it</li>
-        </ul>
-        <p>
-          This exists to prevent impressionistic synthesis. A finding that sounds compelling
-          but rests on one or two vivid participants does not get presented as a pattern —
-          and the vivid sessions are exactly the ones that stay with you.
-        </p>
-        <p>
-          Coding was AI-assisted: candidate takeaways and the passages supporting them were
-          surfaced across the full transcript set rather than assembled by hand. The
-          participant-count check is what makes that defensible. Every candidate still had
-          to clear the same three-way tagging against every participant before it could be
-          elevated — so the tool could propose a pattern, but not confirm one.
-        </p>
-      </div>
 
       <div class="method-card">
         <h3>Transcript conventions</h3>
@@ -158,42 +130,68 @@
       </div>
 
       <div class="method-card">
-        <h3>A/B qualitative design</h3>
+        <h3>AI-assisted analysis</h3>
         <p>
-          Two distinct participant groups per round, each experiencing one variant. This
-          allowed direct comparison of comprehension, willingness, and mental model
-          formation between framings — rather than only measuring change before and after
-          within a single group.
+          Coding was AI-assisted: candidate takeaways and the passages supporting them
+          were surfaced across the full transcript set rather than assembled by hand,
+          against the cleaned transcripts rather than the raw ones. What went into each
+          round&rsquo;s report was selected and written from there.
         </p>
       </div>
 
-      <h2>What changed between rounds</h2>
+      <div class="method-card">
+        <h3>A/B qualitative design</h3>
+        <p>
+          In rounds 1 and 2, two distinct participant groups each experienced one variant.
+          This allowed direct comparison of comprehension, willingness, and mental model
+          formation between variants — rather than only measuring change before and after
+          within a single group. Round 3 dropped the split and tested one variant, since the
+          question by then was whether the value proposition landed, not which of two did.
+        </p>
+      </div>
+
+      <h2>What each round tested</h2>
       <p>
-        Findings fed directly into the next round's stimulus, so each round tested a flow
-        the previous round had shaped.
+        Each round carried the previous round&rsquo;s result into the next stimulus, so the
+        comparison narrowed as it went — from what to call the step, to how much to say
+        about it, to whether the value landed.
       </p>
       <ul class="iterations">
         <li>
-          <span class="it-key">R1 → R2</span>
+          <span class="it-key">R1</span>
           <span class="it-body">
-            CTA copy was revised and the enrollment prompt repositioned, so the offer read
-            more clearly and arrived at a less disruptive point in the purchase. Supporting
-            messaging was rewritten to communicate the cross-merchant benefit earlier.
+            <strong>Terminology — Continue vs Passkey</strong>
+            Two flow variants side by side: the standard framing already in use, against one
+            reframed around the passkey concept itself. This was the only
+            round fielded in both markets: US participants proved markedly less familiar with
+            payment authentication methods and did not see the value in enrolling, so rounds 2
+            and 3 ran in the UK only.
           </span>
         </li>
         <li>
-          <span class="it-key">R2 → R3</span>
+          <span class="it-key">R2</span>
           <span class="it-body">
-            The two-step structure was made more visually distinct and terminology was
-            standardized across the flow. Context was tightened rather than added to —
-            enough to answer the questions participants were raising, without lengthening
-            what they had to read at the decision point.
+            <strong>Context density — reduced vs full</strong>
+            Both variants now used the Continue framing, moving the comparison to how much
+            explanation to attach at the point of the ask: a reduced-context variant against
+            a full-context one. This is where <em>enough</em> had to be defined rather than
+            assumed.
+          </span>
+        </li>
+        <li>
+          <span class="it-key">R3</span>
+          <span class="it-body">
+            <strong>Value proposition</strong>
+            A single variant rather than a comparison. With the wording and the amount of
+            context settled, the final round checked whether the value proposition was
+            surfaced clearly enough for participants to recognize and understand what they
+            were being offered.
           </span>
         </li>
       </ul>
 
       <h2>Outcome</h2>
-      <p>Findings from this study directly informed:</p>
+      <p>The study directly informed:</p>
       <ul>
         <li>The messaging hierarchy on the enrollment prompt screen</li>
         <li>
