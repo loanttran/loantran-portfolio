@@ -230,8 +230,8 @@ hr {
 
 .wordmark {
   display: inline-flex;
-  flex-direction: column;
-  gap: 0.45rem;
+  align-items: baseline;
+  gap: 0.5rem;
   line-height: 1.15;
   font-family: var(--serif);
   font-size: 1.0625rem;
@@ -249,7 +249,21 @@ hr {
   text-transform: uppercase;
   color: var(--ink-3);
   font-weight: 500;
-  white-space: normal;
+  white-space: nowrap;
+}
+.wordmark span::before {
+  content: "\00B7";
+  margin-right: 0.5rem;
+}
+
+/* Stacks on narrow screens so the header does not overflow. */
+@media (max-width: 34rem) {
+  .wordmark {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  .wordmark span::before { content: none; }
 }
 
 .site-nav {

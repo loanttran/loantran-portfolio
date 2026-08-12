@@ -6,7 +6,7 @@
 <title>Product Flows Worksheet Redesign — Loan Tran</title>
 <meta name="description" content="The design file was the team's primary tool and &quot;source of truth&quot; for aligning clients and regional partners on payment authentication flows. Exploration of redesign was meant to accommodate future product scaling so the worksheet could better support different users: product teams, design teams, sales, vendors, partners, and external clients.">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
@@ -58,7 +58,7 @@
     <div class="spec">
       <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">Lead UX Researcher</div></div>
       <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Generative stakeholder interviews · Thematic synthesis · Iterative prototyping</div></div>
-      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">n = 7 · 5 prototype iterations</div></div>
+      <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">n = 7</div></div>
       <div class="spec__cell"><div class="spec__key">Output</div><div class="spec__val">Research synthesis and a working single-page worksheet prototype</div></div>
     </div>
   </div>
@@ -70,10 +70,14 @@
       <p>
         The product team maintained a design-file "flow worksheet" — a static visual
         reference showing how payment passkey enrollment and authentication looked on
-        mobile. It was the team's primary artifact for aligning clients, partners, and
-        internal regional teams on the experience.
+        mobile. It had become the source of truth for six different audiences: product,
+        design, and sales teams internally, and vendors, partners, and external clients
+        beyond them.
       </p>
-      <p>Three problems compounded each other:</p>
+      <p>
+        Each of those groups wanted something different from the same file, and the format
+        could not stretch to cover them. Three problems compounded each other:
+      </p>
       <ul>
         <li>
           <strong>It was mobile-only.</strong> Teams had no visual reference for web,
@@ -90,8 +94,10 @@
         </li>
       </ul>
       <p>
-        The product was also about to scale — new regions, new locales, new authentication
-        technologies. The format was not going to survive that growth.
+        Scaling was about to make each of those worse on a known schedule — new regions,
+        new locales, new authentication technologies, all of it needing to be represented
+        for all six audiences. The question the redesign had to answer was whether one
+        artifact could serve them at that size, or whether the format itself had to change.
       </p>
 
 
@@ -99,15 +105,10 @@
       <ul>
         <li>Worked on this with a second researcher — we each built a separate prototype,
           exploring different directions from the same research</li>
-        <li>Scoped and ran the stakeholder interview series, choosing participants to
-          represent both the teams that produced the worksheet and the teams that
-          consumed it downstream</li>
-        <li>Synthesized the interviews into six themes, validating each against the full
-          interview set before presenting it</li>
-        <li>Designed and built my prototype through five iterations — a single
-          self-contained HTML file, coded with Claude Code</li>
-        <li>Tied every prototype feature back to a specific finding, so the artifact
-          argued the case rather than illustrating it</li>
+        <li>Scoped and ran the stakeholder interview series</li>
+        <li>Synthesized the interviews into six themes</li>
+        <li>Designed and built my prototype — a single self-contained HTML file, coded
+          with Claude Code</li>
         <li>Presented to product leadership in stakeholder reviews</li>
       </ul>
 
@@ -127,54 +128,14 @@
 
       <h2>From research to prototype</h2>
       <p>
-        Rather than hand over a slide deck of recommendations, I built the argument. Five
-        iterations of an interactive prototype, each grounded in specific findings — so
-        every feature could be traced back to something a stakeholder had actually said.
-        A second researcher on the project built a parallel prototype exploring a
-        different direction from the same findings.
+        Rather than hand over a slide deck of recommendations, I built the argument: a
+        working interactive prototype where every feature traced back to something a
+        stakeholder had actually said. A second researcher on the project built a parallel
+        prototype exploring a different direction from the same research.
       </p>
 
-      <ul class="iterations">
-        <li>
-          <span class="it-key">V2</span>
-          <span class="it-body">
-            <strong>Baseline</strong>
-            Established the core concept — a hosted, filterable flow viewer with direct
-            navigation, replacing extraction with browsing.
-          </span>
-        </li>
-        <li>
-          <span class="it-key">V3</span>
-          <span class="it-body">
-            <strong>Filters and multi-device</strong>
-            Use-case, language, and currency filters, plus device switching across mobile,
-            tablet, and desktop — closing the responsive gap and building for multi-locale
-            scale from the start.
-          </span>
-        </li>
-        <li>
-          <span class="it-key">V4</span>
-          <span class="it-body">
-            <strong>Documentation and environments</strong>
-            A developer documentation panel — sequence diagrams, guides, API reference —
-            docked alongside the viewer, plus environment switching. One fewer separate
-            source to keep in sync, and earlier visibility for engineering.
-          </span>
-        </li>
-        <li>
-          <span class="it-key">V5</span>
-          <span class="it-body">
-            <strong>Export, design intent, and design-file integration</strong>
-            One-click export for regional teams; a toggle surfacing stakeholder vision
-            quotes inline as annotations; and an integration allowing real design frames to
-            replace coded mockups — solving the maintenance problem at its source rather
-            than adding another process to maintain.
-          </span>
-        </li>
-      </ul>
-
       <div class="method-card">
-        <h3>What the final prototype did</h3>
+        <h3>What the prototype did</h3>
         <p>
           A fully self-contained single HTML file with no dependencies, covering five
           payment integration types:
@@ -189,17 +150,24 @@
           <li>Full-flow overview and step-by-step demo views</li>
           <li>Design intent annotations surfacing stakeholder quotes as tooltips</li>
         </ul>
+        <p>
+          Each of those answers something the interviews surfaced: the filters and device
+          previews close the responsive gap, the docked documentation removes a separate
+          source to keep in sync, and the design-file integration attacks the maintenance
+          cost at its source rather than adding another process on top of it.
+        </p>
       </div>
 
       <h2>Outcome</h2>
       <p>
-        The prototype was used to align product leadership on the redesign direction,
-        and became the primary artifact in stakeholder reviews.
+        Both prototypes were presented to product leadership together — two directions
+        built from the same research, shown side by side. That made the redesign a choice
+        between concrete options rather than an argument held in the abstract.
       </p>
       <p>
-        It replaced the competing parallel decks that regional teams had been maintaining
-        separately, and demonstrated that the maintenance problem could be solved at the
-        source rather than by layering on another update process.
+        Mine made the case that the maintenance problem could be solved at its source, by
+        mapping real design frames into the flow slots rather than layering another update
+        process on top of the one already failing.
       </p>
 
 
