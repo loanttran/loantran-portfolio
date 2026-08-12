@@ -6,7 +6,7 @@
 <title>Payment Authentication Setup Concept Testing — Loan Tran</title>
 <meta name="description" content="Three rounds of unmoderated qualitative testing on a payment authentication setup experience. Iterations focused on CTA button copy and presenting enough context for users without overburdening them with information.">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/css/style.css?v=4">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
@@ -19,7 +19,7 @@
     <nav class="site-nav" aria-label="Primary">
       <span class="site-nav__links">
         <a href="index.html#work" aria-current="page">Work</a>
-        <a href="index.html#approach">Approach</a>
+        <a href="index.html#skills">Skills</a>
       </span>
       <a class="nav-download" href="Loan-Tran-Resume-2026.pdf" download>
         Résumé
@@ -79,10 +79,10 @@
         passkey service (utilizing face ID, fingerprint, or PIN/pattern) to replace one-time
         passcodes on future purchases.
       </p>
-      <p>Four questions were asked of every variant, each round:</p>
+      <p>Research objectives:</p>
       <ul>
         <li>Why are participants likely or unlikely to enroll in passkey authentication?</li>
-        <li>Did they understand what they were signing up for?</li> 
+        <li>Did they understand what they were signing up for?</li>
         <li>Did the authentication experience meet their expectations?</li>
         <li>Where did participants hesitate; where did they have questions or concerns?</li>
       </ul>
@@ -118,80 +118,58 @@
       <h2>Method</h2>
 
       <div class="method-card">
-        <h3>Transcript conventions</h3>
-        <p>
-          All sessions were recorded and transcribed, then cleaned against a documented
-          convention: filler words removed but never inside quotations; corrections notated
-          with the original preserved; ambiguous inferences flagged rather than resolved
-          silently; speech crossing task boundaries marked. Common speech-to-text errors
-          were logged and corrected systematically — the transcription reliably mangled the
-          domain vocabulary in the same ways, so the fixes could be applied consistently.
-        </p>
-        <p>
-          The convention was written first and applied with Claude Code — the filler and
-          notation passes, and the recurring domain-vocabulary corrections. Having the rules
-          fixed in advance is what let the work be delegated: the tool applied a documented
-          convention rather than exercising judgment about what a participant meant.
-        </p>
-        <p>
-          Cleaned transcripts were treated as the source of truth and frozen once finalized.
-        </p>
-      </div>
-
-      <div class="method-card">
         <h3>AI-assisted analysis</h3>
         <p>
-          Coding was AI-assisted, using Claude Code: candidate takeaways and the passages
-          supporting them were surfaced across the full transcript set rather than by hand,
-          against the cleaned transcripts rather than the raw ones. What went into each
-          round&rsquo;s report was selected and written from there.
+          First, each unmoderated session was reviewed and an initial pass of key findings was
+          composed &mdash; <em><strong>this was to ensure that any AI-assisted analysis could be
+          evaluated for output quality to prevent instances of overgeneralized
+          statements.</strong></em>
+        </p>
+        <p>
+          Participant takeaways were generated using Claude Code and the quotes supporting
+          them were surfaced across the full transcript set. Each round&rsquo;s deliverable
+          was written from AI-assisted insights, supporting evidence, and guided by my
+          initial findings.
         </p>
       </div>
 
       <div class="method-card">
         <h3>A/B qualitative design</h3>
         <p>
-          In rounds 1 and 2, two distinct participant groups each experienced one variant.
-          This allowed direct comparison of comprehension, willingness, and mental model
-          formation between variants — rather than only measuring change before and after
-          within a single group. Round 3 dropped the split and tested one variant, since the
-          question by then was whether the value proposition landed, not which of two did.
+          In the first two rounds, two distinct participant groups each experienced one variant.
+          This allowed direct comparison of comprehension, willingness, and expectations between separate experiences using a mix of qualitative questioning and metrics based on Likert, 7-point scale. The final round tested a single variant, bringing together preferred design elements and messaging.
         </p>
       </div>
 
       <h2>What each round tested</h2>
       <p>
-        Each round carried the previous round&rsquo;s result into the next stimulus, so the
-        comparison narrowed as it went — from what to call the step, to how much to say
-        about it, to whether the value landed.
+        Each round carried the previous round&rsquo;s result into the next stimuli/iterations, so the
+        comparison and focus sharpened as the rounds progressed.
       </p>
       <ul class="iterations">
         <li>
           <span class="it-key">R1</span>
           <span class="it-body">
-            <strong>Terminology — Continue vs Passkey</strong>
-            Two flow variants side by side: the standard framing already in use, against one
-            reframed around the passkey concept itself. This was the only
+            <strong>CTA Copy — Continue vs Passkey</strong>
+            Two enrollment flow variants side by side: general &ldquo;Continue&rdquo; terminology vs. passkey-specific wording. This was the only
             round fielded in both markets: US participants proved markedly less familiar with
-            payment authentication methods and did not see the value in enrolling, so rounds 2
-            and 3 ran in the UK only.
+            payment authentication methods and did not see the value in enrolling, so later rounds ran in the UK only.
           </span>
         </li>
         <li>
           <span class="it-key">R2</span>
           <span class="it-body">
-            <strong>Context density — reduced vs full</strong>
-            Both variants now used the Continue framing, moving the comparison to how much
+            <strong>Context Density — Reduced vs Full</strong>
+            Both variants now used the Continue/general framing, moving the focus to how much
             explanation to attach at the point of the ask: a reduced-context variant against
-            a full-context one. This is where <em>enough</em> had to be defined rather than
-            assumed.
+            a fuller one. This is where <em>enough</em> had to be defined &mdash; primarily, what benefits equated to value for participants.
           </span>
         </li>
         <li>
           <span class="it-key">R3</span>
           <span class="it-body">
-            <strong>Value proposition</strong>
-            A single variant rather than a comparison. With the wording and the amount of
+            <strong>Value Proposition</strong>
+            A single variant rather than a comparison. With the copy and the amount of
             context settled, the final round checked whether the value proposition was
             surfaced clearly enough for participants to recognize and understand what they
             were being offered.
@@ -204,19 +182,22 @@
       <ul>
         <li>
           The messaging hierarchy on the enrollment prompt screen — what to lead with, and
-          how much supporting context to carry alongside it
+          how much supporting context to present to users moving quickly through checkout
         </li>
         <li>
-          Terminology standardization across the product, resolving inconsistent usage
-          between related but distinct concepts
+          Correction of participants' misassumption of a key value prop that led to abandonment of enrollment screen
+        </li>
+        <li>
+          Understanding of where specific terminology can help or hinder participant
+          comprehension and enrollment likelihood
         </li>
       </ul>
 
+
       <div class="confidential">
         <p>
-          Conducted at a global payment network. Company names, internal product names,
-          participant names, and proprietary metrics have been omitted, as are the study's
-          findings. Figures describe study design only.
+          Conducted at a global payment network. Company and product names, participant
+          details, and proprietary metrics have been omitted.
         </p>
       </div>
 
