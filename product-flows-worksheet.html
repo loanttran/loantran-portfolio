@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product Flows Worksheet Redesign — Loan Tran</title>
-<meta name="description" content="The design file was the team's primary tool and &quot;source of truth&quot; for aligning clients and regional partners on payment authentication flows. Exploration of redesign was meant to accommodate future product scaling so the worksheet could better support different users: product teams, design teams, regional partners, go-to-market/sales, and external clients.">
+<meta name="description" content="A single design file was the team's source of truth for payment authentication flows — the artifact clients, regional partners, and internal teams all aligned on. With the product about to scale into new regions and new authentication technologies, we explored what the worksheet would need to become to keep serving all of them.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/css/style.css?v=8">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
@@ -46,11 +46,11 @@
     <p class="eyebrow">Case study 02</p>
     <h1>Product Flows Worksheet Redesign</h1>
     <p class="lede">
-      The design file was the team's primary tool and "source of truth" for aligning
-      clients and regional partners on payment authentication flows. Exploration of
-      redesign was meant to accommodate future product scaling so the worksheet could
-      better support different users: product teams, design teams, regional partners,
-      go-to-market/sales, and external clients.
+      A single design file was the team's source of truth for payment authentication
+      flows — the artifact clients, regional partners, and internal teams all aligned on.
+      With the product about to scale into new regions and new authentication
+      technologies, we explored what the worksheet would need to become to keep serving
+      all of them.
     </p>
   </div>
 
@@ -73,7 +73,7 @@
         mobile. It was the team's primary artifact for aligning on the experience flows.
       </p>
       <p>
-        The worksheet served multiple audiences, but the current structure and format could
+        The worksheet served multiple audiences, but its structure and format could
         not adequately meet everyone's needs. <em><strong>Primary points of friction:</strong></em>
       </p>
       <ul>
@@ -99,64 +99,179 @@
       <h2>My role</h2>
       <ul>
         <li>Supported lead researcher in scoping research objectives, drafting discussion guides (questions varied based on role), recruiting representative stakeholders, and running interviews</li>
-      
         <li>Synthesized interviews into themes and co-authored findings and deliverables into Figma exploratory presentation</li>
-        <li>My contribution focused on new features based on primary stakeholder's vision of worksheet enhancements</li>
+        <li>Developed new feature concepts from the friction points the interviews surfaced, shaped by the primary stakeholder's vision for the worksheet</li>
         <li>Designed and built prototype using Claude Code; lead researcher built similar prototype using Replit</li>
       </ul>
 
       <h2>From research to prototype</h2>
       <p>
-        Seven interviews were conducted across the teams that relied on the worksheet most: go-to-market/sales teams, regional product teams, and product leadership. The goal was to
-        understand how the worksheet was actually being used rather than how it was
-        assumed to be used.
+        The lead researcher and I interviewed seven stakeholders across the teams that
+        relied on the worksheet most: go-to-market/sales teams, regional product teams,
+        and product leadership. We wanted to understand how the worksheet was actually
+        being used and where users were experiencing friction.
       </p>
       <p>
-        Qualitative data was synthesized using AI-assisted thematic analysis, and findings were presented in a Figma exploratory deck. The research surfaced a number of opportunities for improvement, which were then translated into a set of recommendations for redesign.
+        We synthesized the interviews into themes using AI-assisted thematic analysis, and
+        presented the findings in a Figma exploratory deck. The interviews surfaced a
+        number of opportunities for improvement, which we translated into a set of
+        recommendations for redesign.
       </p>
       <p>
-        In addition, the research was carried
-        into working prototypes: the lead researcher and I each built a prototype, exploring
-        different variations of how the worksheet could be reimagined and restructured to meet the needs of its users. Mine was a single self-contained
-        HTML file coded with Claude Code, where new features were traced back to needs expressed in the interviews.
+        We also carried the research into working prototypes: the lead researcher built
+        one in Replit, I built one using Claude Code. Each explored a different direction
+        for how the worksheet could be restructured to meet the needs of its users.
       </p>
 
       <div class="method-card">
-        <h3>What the prototype did</h3>
+        <h3>What the prototype showcases</h3>
         <p>
           A fully self-contained single HTML file with no dependencies, covering five
           payment integration types:
         </p>
         <ul>
-          <li>Use-case, language, currency, and integration-type filtering — six languages, seven currencies</li>
           <li>Multi-device preview across mobile, tablet, and desktop</li>
-          <li>Environment switching and a feature-toggle panel for beta methods</li>
+          <li>Use-case, language, currency, and integration-type filtering — six languages, seven currencies</li>
           <li>Design-file integration mapping real frames into flow slots</li>
           <li>Export to document, vector, presentation, image, and video formats</li>
+          <li>Environment switching and a feature-toggle panel for beta methods</li>
           <li>Integrated developer documentation per flow</li>
           <li>Full-flow overview and step-by-step demo views</li>
           <li>Design intent annotations surfacing stakeholder quotes as tooltips</li>
         </ul>
+
+        <figure class="figure">
+          <svg viewBox="0 0 720 330" role="img" aria-labelledby="proto-title proto-desc">
+            <title id="proto-title">Schematic of the prototype interface</title>
+            <desc id="proto-desc">A wireframe of the prototype: a top navigation holding
+            integration-type filters and an export button, a row of use-case, language, currency
+            and environment filters with a beta-methods toggle, and a row of view controls with
+            a mobile, tablet and desktop device toggle; below it a row of five flow slots mapped from the design file, one showing
+            a design-intent annotation; and a developer documentation panel down the right
+            side.</desc>
+
+            <rect x="0.5" y="0.5" width="719" height="329" rx="4" fill="var(--paper)" stroke="var(--rule-strong)"/>
+
+            <!-- top navigation, row 1: integration type, export button -->
+            <text x="20" y="25" font-family="var(--mono)" font-size="9" letter-spacing="0.08em" fill="var(--ink-3)">INTEGRATION TYPE</text>
+            <rect x="132" y="12" width="34" height="16" rx="8" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <rect x="174" y="12" width="34" height="16" rx="8" fill="none" stroke="var(--rule-strong)"/>
+            <rect x="216" y="12" width="34" height="16" rx="8" fill="none" stroke="var(--rule-strong)"/>
+            <rect x="258" y="12" width="34" height="16" rx="8" fill="none" stroke="var(--rule-strong)"/>
+            <rect x="300" y="12" width="34" height="16" rx="8" fill="none" stroke="var(--rule-strong)"/>
+            <rect x="629" y="11" width="62" height="18" rx="3" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="642" y="24" font-family="var(--mono)" font-size="8" letter-spacing="0.08em" fill="var(--ink-3)">EXPORT ▾</text>
+
+            <!-- top navigation, row 2: filters -->
+            <line x1="0" y1="40" x2="720" y2="40" stroke="var(--rule)"/>
+            <rect x="20" y="50" width="104" height="18" rx="3" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="29" y="63" font-family="var(--mono)" font-size="8" letter-spacing="0.06em" fill="var(--ink-3)">USE CASE ▾</text>
+            <rect x="136" y="50" width="104" height="18" rx="3" fill="var(--surface)" stroke="var(--rule-strong)"/>
+            <text x="145" y="63" font-family="var(--mono)" font-size="8" letter-spacing="0.06em" fill="var(--ink-3)">LANGUAGE ▾</text>
+            <rect x="252" y="50" width="104" height="18" rx="3" fill="var(--surface)" stroke="var(--rule-strong)"/>
+            <text x="261" y="63" font-family="var(--mono)" font-size="8" letter-spacing="0.06em" fill="var(--ink-3)">CURRENCY ▾</text>
+            <rect x="368" y="50" width="104" height="18" rx="3" fill="var(--surface)" stroke="var(--rule-strong)"/>
+            <text x="377" y="63" font-family="var(--mono)" font-size="8" letter-spacing="0.06em" fill="var(--ink-3)">ENVIRONMENT ▾</text>
+            <text x="569" y="63" font-family="var(--mono)" font-size="8" letter-spacing="0.1em" fill="var(--ink-3)">BETA METHODS</text>
+            <rect x="665" y="52" width="26" height="13" rx="6.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <circle cx="684.5" cy="58.5" r="4.5" fill="var(--accent)"/>
+
+            <!-- top navigation, row 3: view and device -->
+            <line x1="0" y1="78" x2="720" y2="78" stroke="var(--rule)"/>
+            <text x="20" y="99" font-family="var(--mono)" font-size="8" letter-spacing="0.1em" fill="var(--ink-3)">VIEW</text>
+            <rect x="62" y="88" width="70" height="16" rx="8" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="73" y="99" font-family="var(--mono)" font-size="7.5" letter-spacing="0.06em" fill="var(--ink-3)">OVERVIEW</text>
+            <rect x="140" y="88" width="58" height="16" rx="8" fill="none" stroke="var(--rule-strong)"/>
+            <text x="151" y="99" font-family="var(--mono)" font-size="7.5" letter-spacing="0.06em" fill="var(--ink-3)">STEPS</text>
+            <rect x="226" y="88" width="11" height="15" rx="2" fill="var(--accent-wash)" stroke="var(--accent)"/>
+            <rect x="245" y="87" width="16" height="16" rx="2" fill="none" stroke="var(--rule-strong)"/>
+            <rect x="269" y="89" width="22" height="13" rx="2" fill="none" stroke="var(--rule-strong)"/>
+            <line x1="0" y1="112" x2="720" y2="112" stroke="var(--rule)"/>
+
+            <!-- documentation panel, right side -->
+            <line x1="519.5" y1="112" x2="519.5" y2="330" stroke="var(--rule)"/>
+            <text x="540" y="134" font-family="var(--mono)" font-size="8" letter-spacing="0.1em" fill="var(--ink-3)">DEVELOPER DOCS</text>
+            <rect x="540" y="146" width="160" height="74" rx="3" fill="var(--surface-sunk)" stroke="var(--rule)"/>
+            <rect x="552" y="160" width="110" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="552" y="174" width="136" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="552" y="188" width="88" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="552" y="202" width="120" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="540" y="240" width="160" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="540" y="254" width="140" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="540" y="268" width="152" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="540" y="282" width="120" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="540" y="296" width="158" height="5" rx="2.5" fill="var(--rule)"/>
+
+            <!-- flow slots -->
+            <text x="24" y="134" font-family="var(--mono)" font-size="8" letter-spacing="0.1em" fill="var(--ink-3)">FLOW SLOTS — MAPPED FROM DESIGN FILE</text>
+
+            <rect x="24" y="144" width="84" height="150" rx="3" fill="var(--surface)" stroke="var(--rule)"/>
+            <rect x="36" y="156" width="60" height="100" rx="3" fill="var(--paper)" stroke="var(--rule)"/>
+            <rect x="44" y="166" width="44" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="44" y="178" width="32" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="44" y="234" width="44" height="11" rx="5.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="36" y="282" font-family="var(--mono)" font-size="8" fill="var(--ink-3)">01</text>
+
+            <rect x="121" y="144" width="84" height="150" rx="3" fill="var(--surface)" stroke="var(--rule)"/>
+            <rect x="133" y="156" width="60" height="100" rx="3" fill="var(--paper)" stroke="var(--rule)"/>
+            <rect x="141" y="166" width="44" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="141" y="178" width="32" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="141" y="234" width="44" height="11" rx="5.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="133" y="282" font-family="var(--mono)" font-size="8" fill="var(--ink-3)">02</text>
+
+            <rect x="218" y="144" width="84" height="150" rx="3" fill="var(--surface)" stroke="var(--rule)"/>
+            <rect x="230" y="156" width="60" height="100" rx="3" fill="var(--paper)" stroke="var(--rule)"/>
+            <rect x="238" y="166" width="44" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="238" y="178" width="32" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="238" y="234" width="44" height="11" rx="5.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="230" y="282" font-family="var(--mono)" font-size="8" fill="var(--ink-3)">03</text>
+
+            <rect x="315" y="144" width="84" height="150" rx="3" fill="var(--surface)" stroke="var(--rule)"/>
+            <rect x="327" y="156" width="60" height="100" rx="3" fill="var(--paper)" stroke="var(--rule)"/>
+            <rect x="335" y="166" width="44" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="335" y="178" width="32" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="335" y="234" width="44" height="11" rx="5.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="327" y="282" font-family="var(--mono)" font-size="8" fill="var(--ink-3)">04</text>
+
+            <rect x="412" y="144" width="84" height="150" rx="3" fill="var(--surface)" stroke="var(--rule)"/>
+            <rect x="424" y="156" width="60" height="100" rx="3" fill="var(--paper)" stroke="var(--rule)"/>
+            <rect x="432" y="166" width="44" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="432" y="178" width="32" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="432" y="234" width="44" height="11" rx="5.5" fill="var(--accent-wash)" stroke="var(--accent-ring)"/>
+            <text x="424" y="282" font-family="var(--mono)" font-size="8" fill="var(--ink-3)">05</text>
+
+            <path d="M112.0,215 L117.0,219 L112.0,223" fill="none" stroke="var(--rule-strong)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M209.0,215 L214.0,219 L209.0,223" fill="none" stroke="var(--rule-strong)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M306.0,215 L311.0,219 L306.0,223" fill="none" stroke="var(--rule-strong)" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M403.0,215 L408.0,219 L403.0,223" fill="none" stroke="var(--rule-strong)" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- design-intent annotation, open on slot 03 -->
+            <line x1="288" y1="167" x2="288" y2="176" stroke="var(--accent-ring)"/>
+            <rect x="240" y="176" width="152" height="32" rx="3" fill="var(--surface)" stroke="var(--accent-ring)"/>
+            <rect x="252" y="185" width="120" height="5" rx="2.5" fill="var(--rule)"/>
+            <rect x="252" y="195" width="88" height="5" rx="2.5" fill="var(--rule)"/>
+            <circle cx="288" cy="164" r="3.5" fill="var(--accent)"/>
+          </svg>
+          <figcaption>
+            Structure of the prototype — an abstracted schematic, not a screenshot of the
+            working file.
+          </figcaption>
+        </figure>
+
         <p>
-          Each of those answers something the interviews surfaced: the filters and device
-          previews close the responsive gap, the docked documentation removes a separate
-          source to keep in sync, and the design-file integration attacks the maintenance
-          cost at its source rather than adding another process on top of it.
+          Each of these answers points of friction uncovered in the interviews: the device
+          previews and filters close the responsive gap, the built-in developer documentation removes a separate
+          source to keep in sync, and the design-file integration reduces the maintenance
+          cost rather than adding another process.
         </p>
       </div>
 
       <h2>Outcome</h2>
       <p>
-        Both prototypes went to product leadership together — two directions from the same
-        interviews, shown side by side. That turned the redesign into a choice between
-        working options rather than an argument held in the abstract.
+        The research study was exploratory. The goal was to
+        establish what challenges users faced when using the worksheet and what features could be added to improve the experience. Prototypes were built to demonstrate how the recommendations could be implemented and to provide a tangible artifact for stakeholders to provide feedback on.
       </p>
-      <p>
-        The one I built argued that the maintenance problem could be solved at its source,
-        by mapping real design frames into the flow slots rather than layering another
-        update process on top of the one already failing.
-      </p>
-
+    
 
       <div class="confidential">
         <p>

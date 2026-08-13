@@ -818,6 +818,24 @@ hr {
   .iterations li { grid-template-columns: 1fr; gap: 0.4rem; }
 }
 
+/* ---------- 11b. Schematic figures ---------- */
+
+.figure {
+  margin: 1.6rem 0;
+}
+.figure svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+.figure figcaption {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin-top: 0.7rem;
+}
+
 /* ---------- 12. Confidentiality note ---------- */
 
 .confidential {
