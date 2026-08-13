@@ -6,7 +6,7 @@
 <title>Security Animation at Checkout Survey — Loan Tran</title>
 <meta name="description" content="An A/B/C between-subjects test of two security animations against no animation at all, fielded simultaneously in two markets. The goal was to understand whether the animations increased users' trust in the checkout experience and their likelihood to complete a purchase.">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/css/style.css?v=8">
+<link rel="stylesheet" href="assets/css/style.css?v=18">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
@@ -39,12 +39,8 @@
 <article>
 
   <div class="wrap study-header">
-    <a class="back-link" href="index.html#work">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
-      All work
-    </a>
-    <p class="eyebrow">Case study 04</p>
     <h1>Security Animation at Checkout Survey</h1>
+    <p class="study-date">April 2025</p>
     <p class="lede">
       An A/B/C between-subjects test of two security animations against no animation at
       all, fielded simultaneously in two markets. The goal was to understand whether the
@@ -55,17 +51,26 @@
 
   <div class="wrap">
     <div class="spec">
-      <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">Lead UX Researcher · Research team with a research manager</div></div>
+      <div class="spec__cell"><div class="spec__key">Role</div><div class="spec__val">Lead UX Researcher</div></div>
       <div class="spec__cell"><div class="spec__key">Methods</div><div class="spec__val">Quantitative survey · A/B/C between-subjects · Significance testing</div></div>
       <div class="spec__cell"><div class="spec__key">Scale</div><div class="spec__val">n = 1,800 · 900 per market · 300 per condition per market · 8-minute instrument</div></div>
-      <div class="spec__cell"><div class="spec__key">Markets</div><div class="spec__val">US and India · April 2025</div></div>
+      <div class="spec__cell"><div class="spec__key">Markets</div><div class="spec__val">US and India</div></div>
     </div>
   </div>
 
   <div class="wrap">
     <div class="prose">
 
-      <h2>The questions</h2>
+      <h2>Research objectives</h2>
+      <p>
+        The moment a payment is processing is dead time the user has to sit through, and
+        the proposal was to fill it with an animation that signals the transaction is
+        secure. That raised a question of whether a
+        security cue at checkout could actually change how the experience feels, and if so,
+        whether it should carry the network's own branded symbol or a generic padlock any
+        shopper already knows how to read.
+        <em><strong>The study was built around four questions:</strong></em>
+      </p>
       <ul>
         <li>Do checkout security animations improve perceived security, trustworthiness, and purchase likelihood versus no animation?</li>
         <li>Which animation performs better — and does the answer differ by market?</li>
@@ -77,10 +82,11 @@
       <h2>My role</h2>
       <ul>
         <li>Designed the A/B/C between-subjects instrument</li>
-        <li>Coordinated with brand, design, and product teams on stimulus development — specifically the three video conditions tested</li>
+        <li>Coordinated with brand, design, and product teams on stimulus development</li>
+        <li>Built the survey in aytm and tested it for usability and technical performance in conjunction with survey platform vendor</li>
         <li>Managed dual-market fielding with consistent quality controls across both panels</li>
         <li>Shared the statistical significance testing across conditions with the team</li>
-        <li>Authored the comparative report and presented findings to the cross-functional team</li>
+        <li>Co-authored the comparative report with research manager and presented findings to the design and product team</li>
       </ul>
 
       <h2>Design</h2>
@@ -88,7 +94,10 @@
         Three checkout flows compared in a between-subjects design. Each participant saw
         and rated one randomly assigned flow, then viewed all three side by side to state
         an overall preference — so the study captured both an uncontaminated first
-        impression and a considered comparison.
+        impression and a considered comparison. The two markets were chosen for contrast
+        rather than convenience: most US respondents were unfamiliar with tokenization as
+        a payments concept, while most respondents in India already recognized it, which
+        made any dependence on prior knowledge measurable.
       </p>
 
       <ul class="iterations">
@@ -118,21 +127,6 @@
       </ul>
 
       <div class="method-card">
-        <h3>The dual-market decision</h3>
-        <p>
-          The two markets were selected deliberately, not for convenience. The US and India
-          have close to opposite baselines on familiarity with tokenization as a payments
-          concept — the large majority of US respondents were unfamiliar with it, while the
-          majority of India respondents already recognized it.
-        </p>
-        <p>
-          That contrast turns a confound into an instrument. If the branded animation
-          depends on prior knowledge to work, running it in only one market would hide
-          that; running it in both makes the dependency measurable.
-        </p>
-      </div>
-
-      <div class="method-card">
         <h3>Measures</h3>
         <ul>
           <li>Perceived security of the checkout experience</li>
@@ -143,13 +137,47 @@
         </ul>
       </div>
 
+      <h2>What we found</h2>
+
+      <p>
+        In the US, both animations beat the control, and the lift held across all three
+        measures.
+      </p>
+
+      <p class="statement">
+        <em><strong>The padlock won on universality.</strong></em>
+      </p>
+
+      <p>
+        The padlock led the branded token on every US measure, and the open-ends explained
+        why: participants read it instantly and without instruction — "encrypted," "safe to
+        enter my card," "the site is protected." The branded token drew comments closer to
+        logo recognition than to a security claim — consistent with how few US respondents
+        knew the concept going in.
+      </p>
+
+      <p>
+        India, with its higher familiarity baseline, flattened the result: no concept
+        separated significantly from any other on any measure.
+      </p>
+
       <h2>Outcome</h2>
-      <ul>
-        <li><strong>Animation investment justified.</strong> Both conditions outperformed no animation on security, trust, and repurchase intent in the US — meaningfully, not just directionally.</li>
-        <li><strong>Padlock recommended for US launch.</strong> Its universal symbolism resonated regardless of prior knowledge, and it held its advantage even among the token-aware.</li>
-        <li><strong>India is flexible.</strong> High familiarity and no significant winner opened the door to a market-differentiated strategy rather than a global mandate.</li>
-        <li><strong>The branded token has an educational path.</strong> Its weakness in the US is an awareness story with a plausible trajectory, not a design failure.</li>
-      </ul>
+      <p>
+        <strong>The interest in a security animation was justified.</strong> Both
+        concepts outperformed no animation on security, trust, and repurchase intent in
+        the US — meaningfully, not just directionally.
+      </p>
+
+      <p>
+        What the survey could not answer is whether the attitudinal data would hold.
+        Participants rated a simulated checkout with nothing at stake; the measures were
+        self-reported, and the preference exercise asked them to compare three flows they
+        would never see side by side in a real purchase scenario. Findings were handed off
+        as the starting hypotheses for research with a live merchant to test the padlock
+        animation against behavior, not stated intent. The lift should show up in
+        completion and abandonment on real transactions, or it remains a survey artifact.
+      </p>
+
 
 
       <div class="confidential">
