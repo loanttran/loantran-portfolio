@@ -7,23 +7,44 @@ repo, its own URL.
 Static. No build step, no dependencies.
 
 ```
-index.html                 Home — hero, four studies, approach, about, contact
-usability-testing.html     01  Payment Verification Flow — Usability Testing
-developer-portal.html      02  Developer Portal Redesign
-agentic-commerce.html      03  Agentic Commerce & Payment Security
-checkout-animation.html    04  Checkout Security Animation A/B
-Loan-Tran-Resume-2026.pdf  Linked from the hero and the contact section
-assets/css/style.css       All styling, light + dark
-assets/js/main.js          Theme toggle, header state
-.nojekyll                  Serve files as-is
-.gitignore                 Excludes source research files and the references PDF
+index.html                    Home — hero, four studies, approach, about
+concept-testing.html          Payment Authentication Setup Concept Testing
+product-flows-worksheet.html  Product Flows Worksheet Redesign
+agentic-commerce.html         Agentic Commerce & Payment Authentication
+checkout-animation.html       Security Animation at Checkout Survey
+assets/css/style.css          All styling, light + dark, incl. the chart system
+assets/js/main.js             Theme toggle, header state
+_drafts/                      Unpublished chart proposals — gitignored
+.nojekyll                     Serve files as-is
+.gitignore                    Excludes research files, the references PDF, the résumé
 ```
 
-## Two versions
+## Study-design charts
 
-Version 1 is everything at the repo root — it is the live site and stays frozen.
-Version 2 is a full copy in `v2/`, added 2026-08-18, and is where new work happens.
-See `v2/README.md`.
+`concept-testing.html` carries a "Three rounds, structured similar to RITE testing" chart
+under *What each round tested* — one row per round, showing the variants tested,
+participants on a shared scale, and the markets, with a note on why R2 and R3 ran in the
+UK only.
+
+Chart styles live in section 17 of `assets/css/style.css`. The palette is the validated
+data-viz set, which shares this site's blue ramp:
+
+| Job | Light | Dark |
+|---|---|---|
+| Categorical 1–3 | `#2a78d6` `#eb6834` `#1baf7a` | `#3987e5` `#d95926` `#199e70` |
+| Ordinal blue | `#86b6ef` → `#184f95` | `#184f95` → `#86b6ef` (anchor flips) |
+
+Validated against this site's own chart surfaces — `#ffffff` light and `#191a1f` dark, not
+a script default. All checks pass in both modes. Light-mode aqua sits at 2.82:1, below the
+3:1 mark floor, so every categorical mark carries a visible label. Re-validate before
+changing a hex.
+
+Ground rules the charts follow: every number comes from a fact already stated in the case
+study; nothing is estimated; no confidential metric is added; where results are
+proprietary the chart shows direction only and says so.
+
+Proposals for the other case studies sit in `_drafts/`, gitignored — unapproved charts
+stay off the site. Regenerate with `python3 _drafts/build_cs3.py`.
 
 ## How this differs from the seven-study site
 

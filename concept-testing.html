@@ -7,7 +7,7 @@
 <meta name="description" content="Three rounds of unmoderated qualitative testing on a payment authentication setup experience. Iterations focused on CTA button copy and presenting enough context for users without overburdening them with information.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/css/style.css?v=18">
+<link rel="stylesheet" href="assets/css/style.css?v=19">
 <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
 </head>
 <body>
@@ -140,6 +140,79 @@
         Each round carried the previous round&rsquo;s result into the next stimuli/iterations, so the
         comparison and focus sharpened as the rounds progressed.
       </p>
+
+      <section class="viz">
+        <p class="viz__eyebrow">Study design</p>
+        <h3 class="viz__title">Three rounds, structured similar to RITE testing</h3>
+        <ul class="viz-legend">
+            <li><i style="--swatch: var(--ord-1)"></i>R1 — CTA copy</li>
+            <li><i style="--swatch: var(--ord-2)"></i>R2 — context density</li>
+            <li><i style="--swatch: var(--ord-3)"></i>R3 — value proposition</li>
+        </ul>
+        <figure class="viz__figure">
+          <svg viewBox="0 0 720 300" role="img" aria-labelledby="rndt rndd">
+            <title id="rndt">Three rounds of concept testing, narrowing</title>
+            <desc id="rndd">Each row is one round: the variants it put in front of participants, a bar for how many people took part, and the markets it ran in. Round 1 tested two copy variants with 12 participants in the US and UK; round 2 tested two context-density variants with 10 in the UK; round 3 tested a single combined variant with 5 in the UK. Rounds 2 and 3 ran in the UK only.</desc>
+            <text class="k" x="0" y="18">ROUND</text>
+            <text class="k" x="64" y="18">VARIANTS TESTED</text>
+            <text class="k" x="392" y="18">PARTICIPANTS</text>
+            <text class="k" x="640" y="18">MARKETS</text>
+            <line class="grid" x1="0" y1="28" x2="720" y2="28"/>
+            <line class="axis" x1="391.5" y1="36" x2="391.5" y2="280"/>
+            <g>
+              <text class="k k--accent" x="0" y="66" style="font-size:11px">R1</text>
+              <rect class="box--sunk" x="64.5" y="44.5" width="150" height="54" rx="3"/>
+              <rect x="64" y="44" width="3" height="54" fill="var(--ord-1)"/>
+              <text class="lbl lbl--strong" x="78" y="66">Continue</text>
+              <text class="lbl lbl--sm" x="78" y="83">General wording</text>
+              <rect class="box--sunk" x="225.5" y="44.5" width="150" height="54" rx="3"/>
+              <rect x="225" y="44" width="3" height="54" fill="var(--ord-1)"/>
+              <text class="lbl lbl--strong" x="239" y="66">Passkey</text>
+              <text class="lbl lbl--sm" x="239" y="83">Method-specific wording</text>
+              <path d="M392 58 H604 A4 4 0 0 1 608 62 V72 A4 4 0 0 1 604 76 H392 Z" fill="var(--ord-1)"/>
+              <text class="val" x="617" y="72">12</text>
+              <text class="lbl" x="640" y="72">US + UK</text>
+            </g>
+            <line x1="70.5" y1="105" x2="70.5" y2="119" stroke="var(--accent-ring)" stroke-width="2" stroke-linecap="round"/>
+            <text class="k" x="82" y="115">GENERAL “CONTINUE” FRAMING CARRIED FORWARD</text>
+            <g>
+              <text class="k k--accent" x="0" y="150" style="font-size:11px">R2</text>
+              <rect class="box--sunk" x="64.5" y="128.5" width="150" height="54" rx="3"/>
+              <rect x="64" y="128" width="3" height="54" fill="var(--ord-2)"/>
+              <text class="lbl lbl--strong" x="78" y="150">Reduced context</text>
+              <text class="lbl lbl--sm" x="78" y="167">Less at the point of ask</text>
+              <rect class="box--sunk" x="225.5" y="128.5" width="150" height="54" rx="3"/>
+              <rect x="225" y="128" width="3" height="54" fill="var(--ord-2)"/>
+              <text class="lbl lbl--strong" x="239" y="150">Full context</text>
+              <text class="lbl lbl--sm" x="239" y="167">More at the point of ask</text>
+              <path d="M392 142 H568 A4 4 0 0 1 572 146 V156 A4 4 0 0 1 568 160 H392 Z" fill="var(--ord-2)"/>
+              <text class="val" x="581" y="156">10</text>
+              <text class="lbl" x="640" y="156">UK</text>
+            </g>
+            <line x1="70.5" y1="189" x2="70.5" y2="203" stroke="var(--accent-ring)" stroke-width="2" stroke-linecap="round"/>
+            <text class="k" x="82" y="199">SETTLED CONTEXT DEPTH CARRIED FORWARD</text>
+            <g>
+              <text class="k k--accent" x="0" y="234" style="font-size:11px">R3</text>
+              <rect class="box--sunk" x="64.5" y="212.5" width="311" height="54" rx="3"/>
+              <rect x="64" y="212" width="3" height="54" fill="var(--ord-3)"/>
+              <text class="lbl lbl--strong" x="78" y="234">Single variant</text>
+              <text class="lbl lbl--sm" x="78" y="251">Preferred copy + settled context</text>
+              <path d="M392 226 H478 A4 4 0 0 1 482 230 V240 A4 4 0 0 1 478 244 H392 Z" fill="var(--ord-3)"/>
+              <text class="val" x="491" y="240">5</text>
+              <text class="lbl" x="640" y="240">UK</text>
+            </g>
+          </svg>
+          <p class="viz__note">
+            <span class="viz__note-key">Why R2 and R3 ran in the UK only</span>
+            R1 was the only round fielded in both the US and the UK. US participants
+            proved less familiar with payment authentication methods, which led to
+            confusion, so adequate comparisons could not be made between the two. Studies
+            continued with participants in the UK where payment authentication was more
+            familiar.
+          </p>
+        </figure>
+      </section>
+
       <ul class="iterations">
         <li>
           <span class="it-key">R1</span>

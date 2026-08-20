@@ -1057,3 +1057,345 @@ hr {
   .finding, .method-card, .callout { break-inside: avoid; }
   .work-item__link::before { display: none; }
 }
+
+/* ============================================================
+   17. Study-design visuals
+   Charts that map how each study was built. Palette is the
+   validated data-viz set, snapped to this site's blue ramp:
+     categorical  slots 1–3 (blue / orange / aqua)
+     ordinal      one-hue blue ramp, anchor flips in dark
+   Validated with validate_palette.py against #ffffff (light)
+   and #191a1f (dark). Light-mode aqua sits at 2.82:1, so every
+   categorical mark carries a visible label and a table view.
+   ============================================================ */
+
+.viz {
+  /* categorical — identity */
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --s1-wash: rgba(42, 120, 214, 0.10);
+  --s2-wash: rgba(235, 104, 52, 0.10);
+  --s3-wash: rgba(27, 175, 122, 0.10);
+
+  /* ordinal — order, light → dark */
+  --ord-1: #86b6ef;
+  --ord-2: #2a78d6;
+  --ord-3: #184f95;
+
+  /* chart chrome */
+  --viz-surface: var(--surface);
+  --viz-neutral: #8f8f99;
+  --viz-neutral-wash: rgba(143, 143, 153, 0.10);
+
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: clamp(1.3rem, 1rem + 1.4vw, 2.1rem);
+  margin-block: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz {
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --s1-wash: rgba(57, 135, 229, 0.14);
+    --s2-wash: rgba(217, 89, 38, 0.14);
+    --s3-wash: rgba(25, 158, 112, 0.14);
+    --ord-1: #184f95;
+    --ord-2: #2a78d6;
+    --ord-3: #86b6ef;
+    --viz-neutral: #7c7c86;
+    --viz-neutral-wash: rgba(124, 124, 134, 0.14);
+  }
+}
+
+:root[data-theme="dark"] .viz {
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --s1-wash: rgba(57, 135, 229, 0.14);
+  --s2-wash: rgba(217, 89, 38, 0.14);
+  --s3-wash: rgba(25, 158, 112, 0.14);
+  --ord-1: #184f95;
+  --ord-2: #2a78d6;
+  --ord-3: #86b6ef;
+  --viz-neutral: #7c7c86;
+  --viz-neutral-wash: rgba(124, 124, 134, 0.14);
+}
+
+/* ---- card furniture ---- */
+
+.viz__eyebrow {
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.5rem;
+}
+
+.viz__title {
+  font-family: var(--serif);
+  font-size: var(--t-h3);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  margin-bottom: 0.5rem;
+}
+
+.viz__sub {
+  font-family: var(--sans);
+  font-size: var(--t-small);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 62ch;
+  margin-bottom: 1.5rem;
+}
+
+.viz__figure { margin: 0; }
+.viz__figure svg { width: 100%; height: auto; overflow: visible; }
+
+.viz__caption {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin-top: 1rem;
+  max-width: 68ch;
+}
+
+/* ---- shared SVG type & chrome ---- */
+
+.viz svg text { fill: var(--ink-2); }
+
+.viz svg .k {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.09em;
+  fill: var(--ink-3);
+}
+.viz svg .k--accent { fill: var(--accent); }
+
+.viz svg .lbl {
+  font-family: var(--sans);
+  font-size: 11px;
+  fill: var(--ink-2);
+}
+.viz svg .lbl--strong { fill: var(--ink); font-weight: 600; }
+.viz svg .lbl--sm { font-size: 9.5px; }
+
+.viz svg .val {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 600;
+  fill: var(--ink);
+}
+
+.viz svg .axis { stroke: var(--rule-strong); stroke-width: 1; fill: none; }
+.viz svg .grid { stroke: var(--rule); stroke-width: 1; fill: none; }
+.viz svg .box  { fill: var(--surface); stroke: var(--rule); }
+.viz svg .box--sunk { fill: var(--surface-sunk); stroke: var(--rule); }
+.viz svg .flow { stroke: var(--rule-strong); stroke-width: 1.2; fill: none;
+                 stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---- legend ---- */
+
+.viz-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.35rem;
+  margin-bottom: 1.15rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--ink-2);
+  list-style: none;
+  padding: 0;
+}
+.viz-legend li { display: flex; align-items: center; gap: 0.45rem; }
+.viz-legend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  background: var(--swatch, var(--s1));
+  flex: none;
+}
+.viz-legend i.is-line {
+  width: 14px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+/* ---- table view ---- */
+
+.viz-table { margin-top: 1.35rem; }
+.viz-table > summary {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--ink-3);
+  cursor: pointer;
+  padding: 0.3rem 0;
+  list-style: none;
+}
+.viz-table > summary::-webkit-details-marker { display: none; }
+.viz-table > summary::before {
+  content: "＋ ";
+  font-family: var(--mono);
+  color: var(--ink-3);
+}
+.viz-table[open] > summary::before { content: "－ "; }
+.viz-table > summary:hover { color: var(--ink); }
+
+.viz-table__scroll { overflow-x: auto; margin-top: 0.65rem; }
+
+.viz-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+.viz-table th, .viz-table td {
+  text-align: left;
+  padding: 0.5rem 0.9rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  color: var(--ink-2);
+}
+.viz-table th {
+  font-weight: 600;
+  color: var(--ink-3);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.viz-table td.num { font-variant-numeric: tabular-nums; color: var(--ink); }
+
+/* ---- hover / focus layer ---- */
+
+.viz [data-tip] { cursor: default; }
+.viz [data-tip]:focus:not(:focus-visible) { outline: none; }
+.viz [data-tip]:is(:hover, :focus-visible) .hit-lift {
+  stroke: var(--ink);
+  stroke-width: 1.4;
+}
+
+.viz-tip {
+  position: fixed;
+  z-index: 90;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.14);
+  font-family: var(--sans);
+  pointer-events: none;
+}
+.viz-tip[hidden] { display: none; }
+.viz-tip__v {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.viz-tip__l {
+  font-size: 0.75rem;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+
+/* ---- bipartite map: hover isolates one thread ---- */
+
+.bipartite .link,
+.bipartite .node { transition: opacity 0.16s var(--ease); }
+
+.bipartite:has([data-grp="a"]:is(:hover, :focus-visible)) :is(.link, .node):not([data-grp="a"]),
+.bipartite:has([data-grp="b"]:is(:hover, :focus-visible)) :is(.link, .node):not([data-grp="b"]),
+.bipartite:has([data-grp="c"]:is(:hover, :focus-visible)) :is(.link, .node):not([data-grp="c"]) {
+  opacity: 0.15;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bipartite .link, .bipartite .node { transition: none; }
+}
+
+@media print {
+  .viz { break-inside: avoid; }
+  .viz-table { display: none; }
+}
+
+/* ---- gallery page furniture ---- */
+
+.viz-page { padding-bottom: var(--section-y); }
+.viz-page .viz { margin-block: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
+
+.viz .scope-row { border: none; }
+.viz .scope-tile { background: var(--surface); padding: clamp(1rem, 0.8rem + 0.8vw, 1.4rem); }
+.viz .scope-tile__value { font-size: clamp(1.4rem, 1.2rem + 1vw, 1.9rem); }
+
+.viz__hero {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.viz__hero-value {
+  font-family: var(--sans);
+  font-size: clamp(3rem, 2rem + 5vw, 5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  color: var(--accent);
+  flex: none;
+}
+.viz__hero-label {
+  font-family: var(--sans);
+  font-size: var(--t-small);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 34ch;
+}
+
+/* ---- in-figure note: context a caption shouldn't have to carry ---- */
+
+.viz__note {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 68ch;
+  margin: 1.15rem 0 0;
+  padding: 0.8rem 1rem;
+  background: var(--surface-sunk);
+  border-left: 2px solid var(--accent-ring);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.viz__note-key {
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 0.35rem;
+}
+
+/* ---- charts break out of the prose measure ----
+   .prose caps at 66ch (~35rem) for reading comfort, which squeezes a 720-unit
+   chart down to ~7px text. The card widens rightward from the prose's left
+   edge, staying inside .wrap's content box. Below 58rem it stays full-width. */
+
+@media (min-width: 58rem) {
+  .prose > .viz {
+    width: min(52rem, calc(100vw - 2 * var(--gutter)));
+    max-width: none;
+  }
+}
