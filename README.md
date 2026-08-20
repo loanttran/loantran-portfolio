@@ -19,6 +19,12 @@ assets/js/main.js          Theme toggle, header state
 .gitignore                 Excludes source research files and the references PDF
 ```
 
+## Two versions
+
+Version 1 is everything at the repo root — it is the live site and stays frozen.
+Version 2 is a full copy in `v2/`, added 2026-08-18, and is where new work happens.
+See `v2/README.md`.
+
 ## How this differs from the seven-study site
 
 - Four studies instead of seven, renumbered 01–04
