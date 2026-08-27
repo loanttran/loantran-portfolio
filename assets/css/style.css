@@ -1441,3 +1441,28 @@ hr {
   filter: brightness(0.82) saturate(0.92);
 }
 
+/* ============================================================
+   19. Numerals and rag
+   Figures that get scanned or compared want a fixed advance
+   width so the digits stack in a column. Everything else keeps
+   the browser default.
+   ============================================================ */
+
+.viz,
+.spec__val,
+.tag {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Opening quotes and hyphens pull into the margin so the text
+   block keeps a straight left edge. Safari honours this; other
+   engines ignore it harmlessly. */
+.prose {
+  hanging-punctuation: first last;
+}
+
+/* Avoid one-word last lines in running text. */
+.prose p,
+.prose li {
+  text-wrap: pretty;
+}
