@@ -488,7 +488,7 @@ hr {
   color: var(--ink-2);
   font-size: var(--t-small);
   line-height: 1.62;
-  max-width: 58ch;
+  max-width: 74ch;
   margin-bottom: 1rem;
 }
 
