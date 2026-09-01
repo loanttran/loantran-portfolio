@@ -959,61 +959,10 @@ hr {
 }
 .contact-item__val a { text-decoration-color: var(--accent-ring); }
 
-/* ---------- 14b. Downloads ---------- */
-
-.downloads {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: 2.5rem;
-}
-
-.download-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--rule-strong);
-  border-radius: var(--radius);
-  background: var(--paper);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.18s var(--ease), background-color 0.18s var(--ease);
-}
-.download-link:hover {
-  border-color: var(--accent);
-  background: var(--accent-wash);
-  color: inherit;
-}
-.download-link svg {
-  width: 17px;
-  height: 17px;
-  color: var(--accent);
-  flex-shrink: 0;
-}
-.download-link__text { display: flex; flex-direction: column; gap: 0.1rem; }
-.download-link__label {
-  font-family: var(--sans);
-  font-size: var(--t-small);
-  font-weight: 600;
-  color: var(--ink);
-  line-height: 1.3;
-}
-.download-link__meta {
-  font-family: var(--mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.05em;
-  color: var(--ink-3);
-}
-
-/* Non-downloadable counterpart — same shape, no link affordance */
-.download-link--muted {
-  border-style: dashed;
-  border-color: var(--rule);
-  cursor: default;
-}
-.download-link--muted svg { color: var(--ink-3); }
-.download-link--muted .download-link__label { color: var(--ink-2); font-weight: 500; }
+/* The résumé and references are deliberately not published, so they
+   sit in the contact list as plain values rather than as controls
+   that cannot be pressed. */
+.contact-item__val--muted { color: var(--ink-3); }
 
 /* ---------- 15. Footer ---------- */
 
