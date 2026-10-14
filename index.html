@@ -130,7 +130,6 @@
   }
   .card__cap .when { text-align: right; white-space: nowrap; color: var(--ink-3); }
   .card--cta { justify-content: space-between; padding: var(--pad); }
-  .card--cta { grid-column: span 2; } /* fills the row while the fitness card is hidden */
   .card--cta .cta-big { font-size: clamp(32px, 3.4vw, 52px); letter-spacing: -0.04em; line-height: 1; }
   .card--cta p { font-size: 16px; color: var(--ink-3); max-width: 24ch; }
   .card--cta:hover { background: var(--hover); }
@@ -298,8 +297,30 @@
         </div>
       </a>
 
+      <a class="card" href="pinterest-user-engagement.html">
+        <div class="card__art" aria-hidden="true"><svg viewBox="0 0 400 300">
+ <g class="obj"><g transform="rotate(-4 200 150)">
+  <path class="d f" d="M104 58 C170 55 240 55 298 58 C302 58 304 61 304 66 L302 236 C302 241 299 244 294 244 L108 246 C102 246 99 243 99 237 L100 66 C100 61 101 58 104 58 Z"/>
+  <path class="d" d="M126 86 C146 85 162 85 178 86 L177 152 C160 153 144 153 125 152 Z"/>
+  <path class="d" d="M134 136 L148 116 L158 128 L164 120 L172 136"/>
+  <path class="d" d="M204 82 C222 81 260 81 278 82 L277 120 C258 121 222 121 203 120 Z"/>
+  <path class="d" d="M204 144 C222 143 260 143 278 144 L277 222 C258 223 222 223 203 222 Z"/>
+  <path class="d" d="M222 196 C222 176 244 168 256 178 C266 188 252 204 240 200"/>
+  <path class="d" d="M126 176 C146 175 162 175 178 176 L177 222 C160 223 144 223 125 222 Z"/>
+  <path class="d" d="M138 192 H164 M138 206 H156"/>
+  <path class="d f" d="M152 78 C152 70 160 70 160 78 C160 84 152 84 152 78 Z"/>
+  <path class="d f" d="M236 74 C236 66 244 66 244 74 C244 80 236 80 236 74 Z"/>
+ </g></g>
+ <path class="d" d="M330 54 C332 68 336 72 350 74 C336 76 332 80 330 94 C328 80 324 76 310 74 C324 72 328 68 330 54 Z"/>
+</svg></div>
+        <div class="card__cap">
+          <span>Pinterest: Understanding User Engagement</span>
+          <span class="when">May 2021</span>
+        </div>
+      </a>
+
       <!-- Fitness case study: hidden while it's under review.
-           To publish: uncomment this card, delete the "span 2" rule on .card--cta,
+           To publish: uncomment this card, move it above the Pinterest card, give .card--cta "grid-column: 1 / -1",
            and move the page from _drafts/ to the site root (see README).
       <a class="card" href="fitness-app-social-report.html">
         <div class="card__art" aria-hidden="true"><svg viewBox="0 0 400 300">

@@ -12,6 +12,7 @@ concept-testing.html          Payment Authentication Setup Concept Testing
 product-flows-worksheet.html  Product Flows Worksheet Redesign
 agentic-commerce.html         Agentic Commerce & Payment Authentication
 checkout-animation.html       Security Animation at Checkout Survey
+pinterest-user-engagement.html  Pinterest: Understanding User Engagement (term paper, verbatim)
 assets/css/report.css         Case study styling, light + dark, incl. the chart system
 assets/js/report.js           Theme toggle and footer year for the case studies
 assets/img/                   The homepage collage
@@ -49,9 +50,10 @@ the live stylesheet. To publish it:
 
 1. Move it to the site root and change its `../assets/` and `../index.html` paths to
    `assets/` and `index.html`.
-2. In `index.html`, uncomment the hidden fitness card and delete the `span 2` rule on
-   `.card--cta`.
-3. Add a Next link from `checkout-animation.html` to it.
+2. In `index.html`, uncomment the hidden fitness card, move it above the Pinterest card,
+   and give `.card--cta` `grid-column: 1 / -1` so it fills the last row.
+3. Slot it between `checkout-animation.html` and `pinterest-user-engagement.html` in the
+   pager links (Next/Previous on both neighbours, and on the fitness page itself).
 
 `_drafts/build_report.py` generated the restyled case studies from the old pages. Those
 old pages are gone, so the script is retired. Edit the case study pages directly.
